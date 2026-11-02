@@ -1,0 +1,34 @@
+/* Helping Hands site styles. One file shared by every page. */
+:root{--ink:#111827;--muted:#4b5563;--line:#e5e7eb;--bg:#ffffff;--soft:#f3f4f6;--accent:#0b6b4f;--todo:#fff3a3}
+@media (prefers-color-scheme:dark){:root{--ink:#f3f4f6;--muted:#b6bcc6;--line:#2b3038;--bg:#0f1216;--soft:#1a1e24;--accent:#4ade9d;--todo:#5c4b00}}
+*{box-sizing:border-box}
+html{font-size:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:1.0625rem/1.65 system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1.25rem}
+a{color:var(--accent);text-underline-offset:2px}
+a:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.site-header{border-bottom:1px solid var(--line);padding:1rem 0}
+.brand{font-weight:700;font-size:1.25rem;color:var(--ink);text-decoration:none;display:inline-block;margin-bottom:.5rem}
+nav{display:flex;flex-wrap:wrap;gap:.25rem 1rem;font-size:.95rem}
+nav a{color:var(--muted);text-decoration:none;padding:.15rem 0}
+nav a:hover,nav a[aria-current="page"]{color:var(--ink);text-decoration:underline}
+main{padding-top:2rem;padding-bottom:3rem}
+h1{font-size:2rem;line-height:1.2;margin:0 0 .5rem}
+h2{font-size:1.25rem;margin:2.2rem 0 .5rem}
+p,li{max-width:42rem}
+.meta{color:var(--muted);margin-top:0}
+.lead{font-size:1.2rem;color:var(--muted)}
+.todo{background:var(--todo);padding:0 .25rem;border-radius:3px}
+.apps{display:grid;gap:1rem;margin:1.5rem 0}
+@media(min-width:40rem){.apps{grid-template-columns:1fr 1fr}}
+.app{border:1px solid var(--line);border-radius:8px;padding:1.1rem 1.25rem;background:var(--soft)}
+.app h2{margin-top:0}
+.btn{display:inline-block;background:var(--accent);color:#fff;padding:.6rem 1.1rem;border-radius:6px;text-decoration:none;font-weight:600}
+@media(prefers-color-scheme:dark){.btn{color:#04281c}}
+.btn:hover{filter:brightness(1.1)}
+.notice{border-left:4px solid var(--accent);background:var(--soft);padding:.75rem 1rem;margin:1.25rem 0}
+table{border-collapse:collapse;width:100%;margin:1rem 0;font-size:.97rem}
+th,td{border:1px solid var(--line);padding:.5rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--soft)}
+.site-footer{border-top:1px solid var(--line);padding:1.5rem 0 2.5rem;color:var(--muted);font-size:.93rem}
+.site-footer p{margin:.25rem 0}
